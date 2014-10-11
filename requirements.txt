@@ -1,4 +1,5 @@
 Django==1.7
 ansible==1.7.2
 psycopg2==2.5.4
+uWSGI==2.0.7
 wsgiref==0.1.2
