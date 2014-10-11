@@ -1,10 +1,11 @@
 from django.conf.urls import patterns, include, url
 from django.contrib import admin
+from cities.views import Home
 
-urlpatterns = patterns('',
-    # Examples:
-    # url(r'^$', 'cidh.views.home', name='home'),
-    # url(r'^blog/', include('blog.urls')),
+admin.autodiscover()
 
+urlpatterns = patterns(
+    '',
     url(r'^admin/', include(admin.site.urls)),
+    url(r'^$', Home.as_view(), name='home'),
 )
