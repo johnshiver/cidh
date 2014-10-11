@@ -25,4 +25,4 @@ class City(models.Model):
     hours = models.CharField(max_length=256, null=True)
 
     def __str__(self):
-        return '%s, %s' % (self.name, self.country)
+        return '%s, %s' % (self.city, self.country)
