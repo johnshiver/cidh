@@ -10,7 +10,6 @@ class CityAdmin(admin.ModelAdmin):
               'jurisdiction',
               'state',
               'country',
-              'type_of',
               'drink_legal',
               'park',
               'park_info',
