@@ -19,4 +19,15 @@ class cityView(View):
     template_name = 'city.html'
 
     def get(self, request, *args, **kwargs):
-        pass
+        city_id = int(self.kwargs['city_id'])
+        current_city = City.objects.get(pk=city_id)
+        return render(request, self.template_name, {'city': current_city})
+
+
+class cityDetailView(View):
+    template_name = 'city_detail.html'
+
+    def get(self, request, *args, **kwargs):
+        city_id = int(self.kwargs['city_id'])
+        current_city = City.objects.get(pk=city_id)
+        return render(request, self.template_name, {'city': current_city})

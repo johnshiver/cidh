@@ -1,0 +1,103 @@
+{% extends 'base.html' %}
+
+{% block top %} {{city.city}} details {% endblock %}
+
+{% block content %}
+
+<div class="icons">
+
+<!-- icons -->
+<div class="col-md-3">
+    <a href='#vehicle'>
+    <img src="/static/photos/car.gif" alt="" height="75" width="75">
+    </a>
+</div>
+<div class="col-md-3">
+    <a href='#park'>
+    <img src="/static/photos/park1.gif" alt="" height="75" width="75">
+    </a>
+</div>
+<div class="col-md-3">
+    <a href='#transportation'>
+    <img src="/static/photos/public_transport.gif" alt="" height="75" width="75">
+    </a>
+</div>
+<div class="col-md-3">
+    <a href='#street'>
+    <img src="/static/photos/street1.gif" alt="" height="75" width="75">
+    </a>
+</div>
+<!-- endicons -->
+
+</div>
+
+
+<!-- descriptions -->
+<h3>Parks: </h3>
+<div id="park">
+
+
+    {{ city.park_info }}
+
+</div>
+
+
+<h3>Streets: </h3>
+<div id="street">
+
+    {{ city.street_info }}
+
+</div>
+
+<h3>Vehicles: </h3>
+<div id="vehicle">
+
+    {{ city.street_info }}
+
+</div>
+
+<h3>Public transportation: </h3>
+<div id="transportation">
+
+    {{ city.transportation_info }}
+
+</div>
+
+<h3>Beer: </h3>
+<div id="beer">
+
+    {{ city.beer }}
+
+</div>
+
+<h3>Wine: </h3>
+<div id="wine">
+
+    {{ city.wine }}
+
+</div>
+
+<h3>Liquor: </h3>
+<div id="liquor">
+
+    {{ city.liquor }}
+
+</div>
+
+<h3>Age: </h3>
+<div id="age">
+
+    {{ city.age }}
+
+</div>
+
+
+<h3>Hours: </h3>
+<div id="hours">
+
+
+    {{ city.hours }}
+
+</div>
+
+{% endblock %}

@@ -1,9 +1,26 @@
 {% extends 'base.html' %}
 
+{% block top %} Can I drink in {{city.city}}? {% endblock %}
+
 {% block content %}
 
-This is {{ city.name }}
+<div class="col-md-4"></div>
+<div class="col-md-4">
+{% if city.drink_legal %}
+
+<a href='/city_detail/{{city.id}}'>
+  <img src="/static/photos/Checkmark.gif" height="200" width="200">
+</a>
 
 
+{% else %}
+
+<p class="lead">X ICON HERE</p>
+
+{% endif %}
+
+</div>
+
+<div class="col-md-4"></div>
 
 {% endblock %}

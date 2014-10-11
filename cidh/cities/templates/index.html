@@ -1,10 +1,12 @@
 {% extends 'base.html' %}
 
 
+{% block top %} Can I drink here? {% endblock %}
 {% block content %}
 
+<ul>
 {% for city in cities %}
-<b>{{ city.name }}, {{ city.country }}</b>
+<li><p class="lead"><a href="city/{{city.id}}">{{ city.city }}, {{ city.country }}</a></p></li>
 {% endfor %}
-
+</ul>
 {% endblock %}

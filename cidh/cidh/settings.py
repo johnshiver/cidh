@@ -86,3 +86,5 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 STATIC_ROOT = '/home/ubuntu/cidh/static/'
+MEDIA_ROOT = '/home/ubuntu/cidh/media'
+MEDIA_URL = '/media/'
