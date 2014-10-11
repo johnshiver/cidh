@@ -24,5 +24,16 @@ class City(models.Model):
     age = models.CharField(max_length=256)
     hours = models.CharField(max_length=256, null=True)
 
+    cta1_url = models.CharField(max_length=256, default='foo', blank=True, null=True)
+    cta1_title = models.CharField(max_length=256, default='foo', blank=True, null=True)
+    cta2_url = models.CharField(max_length=256, default='foo', blank=True, null=True)
+    cta2_title = models.CharField(max_length=256, default='foo', blank=True, null=True)
+    cta3_url = models.CharField(max_length=256, default='foo', blank=True, null=True)
+    cta3_title = models.CharField(max_length=256, default='foo', blank=True, null=True)
+    cta4_url = models.CharField(max_length=256, default='foo', blank=True, null=True)
+    cta4_title = models.CharField(max_length=256, default='foo', blank=True, null=True)
+    cta5_url = models.CharField(max_length=256, default='foo', blank=True, null=True)
+    cta5_title = models.CharField(max_length=256, default='foo', blank=True, null=True)
+
     def __str__(self):
         return '%s, %s' % (self.city, self.country)
