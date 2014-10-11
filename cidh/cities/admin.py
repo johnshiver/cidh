@@ -5,9 +5,26 @@ from .models import City
 
 class CityAdmin(admin.ModelAdmin):
 
-    fields = ('name',
+    fields = ('city',
+              'geography',
+              'jurisdiction',
+              'state',
               'country',
-              'is_legal')
+              'type_of',
+              'drink_legal',
+              'park',
+              'park_info',
+              'street',
+              'street_info',
+              'vehicle',
+              'vehicle_info',
+              'transportation',
+              'transportation_info',
+              'beer',
+              'wine',
+              'liquor',
+              'age',
+              'hours',)
 
 
 admin.site.register(City, CityAdmin)

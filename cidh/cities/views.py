@@ -14,3 +14,9 @@ class Home(View):
         cities = City.objects.all()
         return render(request, self.template_name, {'cities': cities})
 
+
+class cityView(View):
+    template_name = 'city.html'
+
+    def get(self, request, *args, **kwargs):
+        pass
