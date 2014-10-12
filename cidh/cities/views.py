@@ -21,8 +21,23 @@ class cityView(View):
     def get(self, request, *args, **kwargs):
         city_id = int(self.kwargs['city_id'])
         current_city = City.objects.get(pk=city_id)
+        if current_city.cta1_url != 'foo':
+            url1 = current_city.cta1_url
+        else:
+            url1 = None
+        if current_city.cta2_url != 'foo':
+            url2 = current_city.cta1_url
+        else:
+            url2 = None
+        if current_city.cta3_url != 'foo':
+            url3 = current_city.cta3_url
+        else:
+            url3 = None
 
-        return render(request, self.template_name, {'city': current_city})
+        return render(request, self.template_name, {'city': current_city,
+                                                    'url1': url1,
+                                                    'url2': url2,
+                                                    'url3': url3})
 
 
 class cityDetailView(View):

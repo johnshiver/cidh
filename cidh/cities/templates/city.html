@@ -25,25 +25,29 @@
 
 <ul>
 
+{% if url1 %}
 <li>
-<a href="{{ city.cta1_url }}" class="btn btn-default btn-lg" role="button" style="margin-bottom:20px">
+<a href="{{ url1 }}" class="btn btn-default btn-lg" role="button" style="margin-bottom:20px">
     <span class="glyphicon glyphicon-glass"></span>
 {{ city.cta1_title }}</a>
 </li>
+{% endif %}
 
-
+{% if url2 %}
 <li>
-<a href="{{ city.cta2_url }}" class="btn btn-default btn-lg" role="button" style="margin-bottom:20px">
+<a href="{{ url2 }}" class="btn btn-default btn-lg" role="button" style="margin-bottom:20px">
     <span class="glyphicon glyphicon-road"></span>
 {{ city.cta2_title }}</a>
 </li>
+{% endif %}
 
-
+{% if url3 %}
 <li>
-<a href="{{ city.cta3_url }}" class="btn btn-default btn-lg" role="button" style="margin-bottom:20px">
+<a href="{{ url3 }}" class="btn btn-default btn-lg" role="button" style="margin-bottom:20px">
     <span class="glyphicon glyphicon-hand-right"></span>
 {{ city.cta3_title }}</a>
 </li>
+{% endif %}
 
 </ul>
 
