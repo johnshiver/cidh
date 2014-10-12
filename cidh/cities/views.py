@@ -11,7 +11,7 @@ class Home(View):
 
     def get(self, request, *args, **kwargs):
 
-        cities = City.objects.all()
+        cities = City.objects.order_by('city').all()
         return render(request, self.template_name, {'cities': cities})
 
 
