@@ -14,6 +14,14 @@ class Home(View):
         return render(request, self.template_name, {'cities': cities})
 
 
+class listView(View):
+    template_name = 'list.html'
+
+    def get(self, request, *args, **kwargs):
+        cities = City.objects.order_by('city').all()
+        return render(request, self.template_name, {'cities': cities})
+
+
 class cityView(View):
     template_name = 'city.html'
 

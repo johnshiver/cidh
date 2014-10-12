@@ -15,4 +15,37 @@
 {% endfor %}
 </table>
 
+
+
+
+<script>
+  if(google.loader.ClientLocation)
+{
+    visitor_lat = google.loader.ClientLocation.latitude;
+    visitor_lon = google.loader.ClientLocation.longitude;
+    visitor_city = google.loader.ClientLocation.address.city;
+    visitor_region = google.loader.ClientLocation.address.region;
+    visitor_country = google.loader.ClientLocation.address.country;
+    visitor_countrycode = google.loader.ClientLocation.address.country_code;
+
+}
+
+else
+{
+    // ClientLocation not found or not populated
+    // so perform error handling
+}
+
+if (visitor_city == 'Seattle'){
+  window.location.href='city/8/';
+}
+
+</script>
+
+
+
+
+
+
 {% endblock %}
+
