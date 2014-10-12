@@ -4,100 +4,62 @@
 
 {% block content %}
 
-<div class="icons">
-
-<!-- icons -->
-<div class="col-md-3">
-    <a href='#vehicle'>
-    <img src="/static/photos/car.gif" alt="" height="75" width="75">
-    </a>
-</div>
-<div class="col-md-3">
-    <a href='#park'>
-    <img src="/static/photos/park1.gif" alt="" height="75" width="75">
-    </a>
-</div>
-<div class="col-md-3">
-    <a href='#transportation'>
-    <img src="/static/photos/public_transport.gif" alt="" height="75" width="75">
-    </a>
-</div>
-<div class="col-md-3">
-    <a href='#street'>
-    <img src="/static/photos/street1.gif" alt="" height="75" width="75">
-    </a>
-</div>
-<!-- endicons -->
-
-</div>
-
 
 <!-- descriptions -->
-<h3>Parks: </h3>
-<div id="park">
+<ul>
+<li>
+<p class="lead">
+{% if city.park %}<img src="/static/photos/park_green.png" alt="" height="75" width="75" style="margin-right: 15px;">
+{% else %} <img src="/static/photos/park_red.png" alt="" style="margin-right:15px" height="75" width="75">{{ city.park_info }}</li>
+</p>
+{% endif %}
 
 
-    {{ city.park_info }}
 
-</div>
-
-
-<h3>Streets: </h3>
-<div id="street">
-
-    {{ city.street_info }}
-
-</div>
-
-<h3>Vehicles: </h3>
-<div id="vehicle">
-
-    {{ city.street_info }}
-
-</div>
-
-<h3>Public transportation: </h3>
-<div id="transportation">
-
-    {{ city.transportation_info }}
-
-</div>
-
-<h3>Beer: </h3>
-<div id="beer">
-
-    {{ city.beer }}
-
-</div>
-
-<h3>Wine: </h3>
-<div id="wine">
-
-    {{ city.wine }}
-
-</div>
-
-<h3>Liquor: </h3>
-<div id="liquor">
-
-    {{ city.liquor }}
-
-</div>
-
-<h3>Age: </h3>
-<div id="age">
-
-    {{ city.age }}
-
-</div>
+<li>
+<p class="lead">
+{% if city.street %}<img src="/static/photos/street_green.png" alt="" height="75" width="75" style="margin-right: 15px;">
+{% else %} <img src="/static/photos/street_red.png" alt="" style="margin-right:15px" height="75" width="75">{{ city.street_info }}</li>
+</p>
+{% endif %}
 
 
-<h3>Hours: </h3>
-<div id="hours">
+<li>
+<p class="lead">
+{% if city.vehicle %}<img src="/static/photos/car_green.png" alt="" height="75" width="75" style="margin-right: 15px;">
+{% else %} <img src="/static/photos/car_red.png" alt="" style="margin-right:15px" height="75" width="75">{{ city.vehicle_info }}</li>
+</p>
+{% endif %}
+
+<li>
+<p class="lead">
+{% if city.transportation %}<img src="/static/photos/transport_green.png" alt="" height="75" width="75" style="margin-right: 15px;">
+{% else %} <img src="/static/photos/transport_red.png" alt="" style="margin-right:15px" height="75" width="75">{{ city.transportation_info }}</li>
+</p>
+{% endif %}
 
 
-    {{ city.hours }}
+<li>
+<p style="font-size:18px;"><b style="font-size:22px;">Beer: </b>{{ city.beer }}</p>
+</li>
 
-</div>
+
+<li>
+<p style="font-size:18px;"><b style="font-size:22px;">Wine: </b>{{ city.wine }}</p>
+</li>
+
+<li>
+<p style="font-size:18px;"><b style="font-size:22px;">Liquor: </b>{{ city.liquor }}</p>
+</li>
+
+<li>
+<p style="font-size:18px;"><b style="font-size:22px;">Age: </b>{{ city.age }}</p>
+</li>
+
+
+<li>
+<b style="font-size:22px;">Hours: </b><p style="font-size:18px;">{{ city.hours }}</p>
+</li>
+
 
 {% endblock %}
