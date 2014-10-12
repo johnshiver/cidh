@@ -26,7 +26,7 @@ class cityView(View):
         else:
             url1 = None
         if current_city.cta2_url != 'foo':
-            url2 = current_city.cta1_url
+            url2 = current_city.cta2_url
         else:
             url2 = None
         if current_city.cta3_url != 'foo':
