@@ -23,7 +23,18 @@ class CityAdmin(admin.ModelAdmin):
               'wine',
               'liquor',
               'age',
-              'hours',)
+              'hours',
+              'cta1_url',
+              'cta1_title',
+              'cta2_url',
+              'cta2_title',
+              'cta3_url',
+              'cta3_title',
+              'cta4_url',
+              'cta4_title',
+              'cta5_url',
+              'cta5_title',
+              )
 
 
 admin.site.register(City, CityAdmin)

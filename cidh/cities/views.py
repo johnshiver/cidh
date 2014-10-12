@@ -21,6 +21,7 @@ class cityView(View):
     def get(self, request, *args, **kwargs):
         city_id = int(self.kwargs['city_id'])
         current_city = City.objects.get(pk=city_id)
+
         return render(request, self.template_name, {'city': current_city})
 
 
