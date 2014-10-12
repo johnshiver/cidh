@@ -9,7 +9,7 @@
 <ul>
 <li>
 <p class="lead">
-{% if city.park %}<img src="/static/photos/park_green.png" alt="" height="75" width="75" style="margin-right: 15px;">
+{% if city.park %}<img src="/static/photos/park_green.png" alt="" height="75" width="75" style="margin-right: 15px;">{{ city.park_info }}
 {% else %} <img src="/static/photos/park_red.png" alt="" style="margin-right:15px" height="75" width="75">{{ city.park_info }}</li>
 </p>
 {% endif %}
@@ -18,7 +18,7 @@
 
 <li>
 <p class="lead">
-{% if city.street %}<img src="/static/photos/street_green.png" alt="" height="75" width="75" style="margin-right: 15px;">
+{% if city.street %}<img src="/static/photos/street_green.png" alt="" height="75" width="75" style="margin-right: 15px;">{{ city.street_info }}
 {% else %} <img src="/static/photos/street_red.png" alt="" style="margin-right:15px" height="75" width="75">{{ city.street_info }}</li>
 </p>
 {% endif %}
@@ -26,14 +26,14 @@
 
 <li>
 <p class="lead">
-{% if city.vehicle %}<img src="/static/photos/car_green.png" alt="" height="75" width="75" style="margin-right: 15px;">
+{% if city.vehicle %}<img src="/static/photos/car_green.png" alt="" height="75" width="75" style="margin-right: 15px;">{{ city.vehicle_info }}
 {% else %} <img src="/static/photos/car_red.png" alt="" style="margin-right:15px" height="75" width="75">{{ city.vehicle_info }}</li>
 </p>
 {% endif %}
 
 <li>
 <p class="lead">
-{% if city.transportation %}<img src="/static/photos/transport_green.png" alt="" height="75" width="75" style="margin-right: 15px;">
+{% if city.transportation %}<img src="/static/photos/transport_green.png" alt="" height="75" width="75" style="margin-right: 15px;">{{ city.transportation_info }}
 {% else %} <img src="/static/photos/transport_red.png" alt="" style="margin-right:15px" height="75" width="75">{{ city.transportation_info }}</li>
 </p>
 {% endif %}
